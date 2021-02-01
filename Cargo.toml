@@ -1,0 +1,22 @@
+[package]
+name = "windy-station"
+version = "0.1.0"
+authors = ["Dustin Thomson <dthomson@51systems.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "Oxidized Windy PWS Client"
+categories = ["web-programming::http-client"]
+keywords = ["api", "weather", "windy"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4" , features = ["serde"] }
+
+[dev-dependencies]
+tokio = {version ="1.1", features=["full"]}
+mockito = "0.29"
+env_logger = "0.8.2"
